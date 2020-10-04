@@ -60,7 +60,7 @@ button:hover {
 }
 
 /* content container */
-.content {
+#content {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -93,7 +93,8 @@ nav ul {
 }
 
 nav li {
-  margin-right: 0.4em;
+  margin-right: 0.5em;
+  font-size: 0.8rem;
 }
 
 nav li:last-child {
@@ -143,6 +144,7 @@ main {
 
   nav li {
     margin-right: 2rem;
+    font-size: 1rem;
   }
 
   nav img {
@@ -161,5 +163,11 @@ main {
 
   nav img {
     height: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    background-size: 100%;
   }
 }
