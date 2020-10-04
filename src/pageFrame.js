@@ -31,7 +31,7 @@ function createLogo() {
   const logoLink = document.createElement("a");
   logoLink.setAttribute("href", "#");
   const logoImg = document.createElement("img");
-  logoImg.setAttribute("src", "../images/logo.png");
+  logoImg.setAttribute("src", "./images/logo.png");
   logoImg.setAttribute("alt", "munch");
   logoLink.appendChild(logoImg);
   return logoLink;
