@@ -133,3 +133,33 @@ main {
   margin: 1rem 0;
   font-weight: 700;
 }
+
+@media (min-width: 600px) {
+  .copy {
+    width: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  nav li {
+    margin-right: 2rem;
+  }
+
+  nav img {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: inherit;
+  }
+
+  nav img {
+    height: 50px;
+  }
+}
