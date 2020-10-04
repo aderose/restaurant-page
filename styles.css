@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap");
+
+:root {
+  --main-bg-color: #f1f1f1;
+  --alt-bg-color: #fff;
+  --main-color: #ff4f4f;
+  --main-hover-color: #51ad2a;
+}
+
+/* General Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+}
+
+a,
+a:visited {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--main-hover-color);
+}
+
+button {
+  background-color: var(--main-hover-color);
+  color: var(--alt-bg-color);
+  border: none;
+  padding: 0.5em;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 1px #ddd;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+.container {
+  padding: 0 0.5em;
+}
+
+/* content container */
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Navigation */
+
+nav {
+  flex: 0 1 auto;
+  background-color: var(--alt-bg-color);
+  box-shadow: 0 1px 5px 1px #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  height: 50px;
+}
+
+nav img:hover {
+  filter: brightness(120%);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 0.75em;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
