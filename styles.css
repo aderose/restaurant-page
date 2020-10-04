@@ -97,6 +97,7 @@ nav ul {
 nav li {
   font-size: 0.8rem;
   padding: 0.5em 0.3em;
+  cursor: pointer;
 }
 
 nav li:last-child {
@@ -188,5 +189,8 @@ main {
 @media (min-width: 1440px) {
   main {
     background-size: 100%;
+  }
+  .container {
+    padding: 1em 10em;
   }
 }
