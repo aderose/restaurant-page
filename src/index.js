@@ -13,8 +13,9 @@ const tabs = Array.from(links.children).slice(0, 3);
 tabs[0].setAttribute("class", "active");
 
 // add event listener to each tab link
-tabs.forEach((link) => link.addEventListener("click", changeTab));
+tabs.forEach((tab) => tab.addEventListener("click", changeTab));
 
+// change the currently active tab and the page contents
 function changeTab(e) {
   main.innerHTML = "";
   tabs.forEach((tab) => tab.removeAttribute("class", "active"));
@@ -30,6 +31,7 @@ function changeTab(e) {
   }
 }
 
+// set the tab with the provided name as the active tab
 function setActiveTab(tabName) {
   const tab = tabs.filter((tab) => tab.innerHTML.includes(tabName))[0];
   tab.setAttribute("class", "active");
