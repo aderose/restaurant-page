@@ -120,12 +120,13 @@ main {
 }
 
 .hero .copy {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   text-align: center;
 }
 
 .copy {
   color: white;
+  width: 100%;
 }
 
 .copy p {
