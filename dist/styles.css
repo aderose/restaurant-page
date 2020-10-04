@@ -71,10 +71,11 @@ button:hover {
 nav {
   flex: 0 1 auto;
   background-color: var(--alt-bg-color);
-  box-shadow: 0 1px 5px 1px #dSdd;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 nav img {
