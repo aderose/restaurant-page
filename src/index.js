@@ -1,5 +1,7 @@
 import { pageFrame } from "./pageFrame.js";
 import { homeContent } from "./homeContent.js";
+import { aboutContent } from "./aboutContent.js";
+import { menuContent } from "./menuContent.js";
 
 const { main, links } = pageFrame();
 main.appendChild(homeContent());
@@ -14,5 +16,21 @@ tabs[0].setAttribute("class", "active");
 tabs.forEach((link) => link.addEventListener("click", changeTab));
 
 function changeTab(e) {
-  console.log(e.target);
+  main.innerHTML = "";
+  tabs.forEach((tab) => tab.removeAttribute("class", "active"));
+  if (e.target.innerHTML.includes("Home")) {
+    setActiveTab("Home");
+    main.appendChild(homeContent());
+  } else if (e.target.innerHTML.includes("Menu")) {
+    setActiveTab("Menu");
+    main.appendChild(menuContent());
+  } else if (e.target.innerHTML.includes("About")) {
+    setActiveTab("About");
+    main.appendChild(aboutContent());
+  }
+}
+
+function setActiveTab(tabName) {
+  const tab = tabs.filter((tab) => tab.innerHTML.includes(tabName))[0];
+  tab.setAttribute("class", "active");
 }
