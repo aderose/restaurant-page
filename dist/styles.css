@@ -30,6 +30,7 @@ a:visited {
   color: var(--main-color);
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 a:hover {

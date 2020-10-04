@@ -1,4 +1,4 @@
-function loadPage() {
+function homePage() {
   const content = document.querySelector("#content");
   content.appendChild(createNav());
   content.appendChild(createHero());
@@ -55,6 +55,7 @@ function createNav() {
 // create HTML element containing a clickable image
 function createLogo() {
   const logoLink = document.createElement("a");
+  logoLink.setAttribute("href", "#");
   const logoImg = document.createElement("img");
   logoImg.setAttribute("src", "../images/logo.png");
   logoImg.setAttribute("alt", "munch");
@@ -72,12 +73,17 @@ function createLinks() {
 }
 
 function createLink(text) {
-  const elementType = text === "Book" ? "button" : "a";
   const link = document.createElement("li");
-  const childEl = document.createElement(elementType);
+  let childEl;
+  if (text === "Book") {
+    childEl = document.createElement("button");
+  } else {
+    childEl = document.createElement("a");
+    childEl.setAttribute("href", "#");
+  }
   childEl.textContent = text;
   link.appendChild(childEl);
   return link;
 }
 
-export { loadPage };
+export { homePage };

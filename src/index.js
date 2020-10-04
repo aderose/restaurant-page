@@ -1,5 +1,5 @@
-import { loadPage } from "./loadPage.js";
+import { homePage } from "./homePage.js";
 
-loadPage();
+homePage();
 
 console.log("Testing webpack");
