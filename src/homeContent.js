@@ -1,7 +1,7 @@
 // create the homepage content
 function homeContent() {
   const home = document.createElement("section");
-  home.setAttribute("class", "hero");
+  home.setAttribute("class", "general-content");
   home.appendChild(createCopy());
   return home;
 }
