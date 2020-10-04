@@ -57,6 +57,11 @@ button:hover {
   filter: brightness(110%);
 }
 
+p {
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
 .container {
   padding: 1em;
 }
@@ -151,9 +156,20 @@ main {
   max-width: 600px;
 }
 
-.copy p {
-  margin: 1rem 0;
-  font-weight: 700;
+/* Menu items */
+.meal-container {
+  border-top: 1px solid white;
+  padding-top: 0.5em;
+  margin: 0.5em 0;
+}
+
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-desc {
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
