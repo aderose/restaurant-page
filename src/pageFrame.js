@@ -1,10 +1,10 @@
 function pageFrame() {
   const content = document.querySelector("#content");
-  const nav = createNav();
+  const { nav, links } = createNav();
   content.appendChild(nav);
   const main = createMain();
   content.appendChild(main);
-  return main;
+  return { main, links };
 }
 
 // create hero section
@@ -21,8 +21,9 @@ function createNav() {
   nav.appendChild(createLogo());
 
   // nav link creation
-  nav.appendChild(createLinks());
-  return nav;
+  const links = createLinks();
+  nav.appendChild(links);
+  return { nav, links };
 }
 
 // create HTML element containing a clickable image
@@ -53,6 +54,7 @@ function createLink(text) {
   } else {
     childEl = document.createElement("a");
     childEl.setAttribute("href", "#");
+    if (text === "Home") childEl.setAttribute("class", "active");
   }
   childEl.textContent = text;
   link.appendChild(childEl);

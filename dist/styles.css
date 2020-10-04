@@ -31,6 +31,8 @@ a:visited {
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
+  height: 100%;
+  padding: 0.5em 0.3em;
 }
 
 a:hover {
@@ -94,12 +96,16 @@ nav ul {
 }
 
 nav li {
-  margin-right: 0.5em;
   font-size: 0.8rem;
 }
 
 nav li:last-child {
   margin-right: 0;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 /* Hero section */
