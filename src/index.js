@@ -1,5 +1,5 @@
-import { homePage } from "./homePage.js";
+import { pageFrame } from "./pageFrame.js";
+import { homeContent } from "./homeContent.js";
 
-homePage();
-
-console.log("Testing webpack");
+const main = pageFrame();
+main.appendChild(homeContent());

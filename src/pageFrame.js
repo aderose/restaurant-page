@@ -1,42 +1,15 @@
-function homePage() {
+function pageFrame() {
   const content = document.querySelector("#content");
-  content.appendChild(createNav());
-  content.appendChild(createHero());
-}
-
-// create hero section
-function createHero() {
-  const main = document.createElement("main");
-  const hero = document.createElement("section");
-  hero.setAttribute("class", "hero");
-  hero.appendChild(createCopy());
-  main.appendChild(hero);
+  const nav = createNav();
+  content.appendChild(nav);
+  const main = createMain();
+  content.appendChild(main);
   return main;
 }
 
-// create the page copy
-function createCopy() {
-  const copy = document.createElement("div");
-  copy.setAttribute("class", "copy container");
-  copy.appendChild(createHeadline());
-  const subhead = document.createElement("p");
-  subhead.textContent =
-    "Live a healthy lifestyle with with our organic range of dishes.";
-  copy.appendChild(subhead);
-  const cta = document.createElement("button");
-  cta.textContent = "Book Now!";
-  copy.appendChild(cta);
-  return copy;
-}
-
-// create headline
-function createHeadline() {
-  const headline = document.createElement("h1");
-  const brandName = document.createElement("span");
-  brandName.setAttribute("class", "brand");
-  brandName.textContent = "munch";
-  headline.innerHTML = `Come and have a ${brandName.outerHTML}!`;
-  return headline;
+// create hero section
+function createMain() {
+  return document.createElement("main");
 }
 
 // create navigation at top of page
@@ -86,4 +59,4 @@ function createLink(text) {
   return link;
 }
 
-export { homePage };
+export { pageFrame };
