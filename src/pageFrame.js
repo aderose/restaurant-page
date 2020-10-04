@@ -54,7 +54,6 @@ function createLink(text) {
   } else {
     childEl = document.createElement("a");
     childEl.setAttribute("href", "#");
-    if (text === "Home") childEl.setAttribute("class", "active");
   }
   childEl.textContent = text;
   link.appendChild(childEl);
