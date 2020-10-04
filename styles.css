@@ -85,6 +85,11 @@ nav {
   z-index: 1;
 }
 
+nav a {
+  display: flex;
+  align-items: center;
+}
+
 nav img {
   height: 30px;
 }
